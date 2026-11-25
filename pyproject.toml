@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory-sync"
+version = "1.0.0"
+description = "Cross-machine path normalizer and safe SQLite cloud-drive snapshot helper for syncing CLAUDE.md, AGENTS.md, and agent workspaces."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Tarik", email = "tarikra1@users.noreply.github.com" }
+]
+keywords = ["claude-code", "agents-md", "dotfiles", "sqlite", "multi-pc", "sync", "developer-tools"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/tarikra1/agent-memory-sync"
+Repository = "https://github.com/tarikra1/agent-memory-sync"
+Changelog = "https://github.com/tarikra1/agent-memory-sync/blob/main/CHANGELOG.md"
+Issues = "https://github.com/tarikra1/agent-memory-sync/issues"
+
+[project.scripts]
+agent-sync = "agent_memory_sync.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
